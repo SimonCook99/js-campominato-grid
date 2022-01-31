@@ -10,7 +10,7 @@ let gridSizeButton = document.getElementById("confirm");
 //numero dei box da mettere nella griglia
 let boxNumbers = 0;
 
-//
+
 gridSizeButton.addEventListener("click", function(){
 
     //Prima di tutto rimuovo la griglia precedente
@@ -27,15 +27,15 @@ gridSizeButton.addEventListener("click", function(){
     }
 
     //creazione della griglia che prende come parametri il numero dei quadrati, e la stringa della difficoltà
-    let node = createGrid(boxNumbers, difficultySelection.value);
+    let node = createGrid(gridContainer, boxNumbers, difficultySelection.value);
 
     
 });
 
 
 
-
-function createGrid(number, difficulty){
+//la funzione di creazione griglia prende come parametri la griglia, il numero di quadrati e la stringa della dificoltà
+function createGrid(grid, number, difficulty){
     for(let i = 1; i <= number; i++){
 
         //creo il singolo quadrato e ci do il numero specifico
@@ -57,8 +57,7 @@ function createGrid(number, difficulty){
             this.classList.add("clicked");
         });
 
-
-        gridContainer.appendChild(node);
+        grid.appendChild(node);
 
     }
 
