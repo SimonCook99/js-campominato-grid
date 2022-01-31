@@ -13,6 +13,10 @@ let boxNumbers = 0;
 //
 gridSizeButton.addEventListener("click", function(){
 
+    //Prima di tutto rimuovo la griglia precedente
+    removePreviousGrid();
+
+
     //valore della variabile diverso in base alla difficoltà
     if(difficultySelection.value == "Easy"){
         boxNumbers = 100;
@@ -48,10 +52,27 @@ function createGrid(number, difficulty){
             node.classList.add("hard"); 
         }
 
+
+        node.addEventListener("click", function(){
+            this.classList.add("clicked");
+        });
+
+
         gridContainer.appendChild(node);
 
     }
 
     return node;
 
+}
+
+
+//funzione che rimuove la griglia precedentemente generata
+function removePreviousGrid(){
+    let boxes = document.querySelectorAll(".box");
+
+    //scorro il vettore di tutti gli elementi box e rimuovo tutti gli elementi all'interno
+    for(let i = 0; i < boxes.length; i++){
+        boxes[i].remove();
+    }
 }

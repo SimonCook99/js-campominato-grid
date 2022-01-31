@@ -60,6 +60,14 @@ main .box{
 
 }
 
+.box:hover{
+    cursor: pointer;
+}
+
+main .box.clicked{
+    background-color: #6495ed;
+}
+
 main .box.easy{
     width: calc(100% / 10);
     height: calc(100% / 10);
@@ -72,4 +80,15 @@ main .box.normal{
 main .box.hard{
     width: calc(100% / 7);
     height: calc(100% / 7);
+}
+
+
+footer{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+footer p{
+    margin-left: 200px;
 }
