@@ -46,15 +46,12 @@ main #grid{
     width: 400px;
     height: 400px;
     margin: 20px auto;
-    border: 1px solid black;
 
     display: flex;
     flex-wrap: wrap;
 }
 
 main .box{
-    width: calc(100% / 10);
-    height: calc(100% / 10);
     border: 1px solid black;
 
     display: flex;
@@ -72,7 +69,7 @@ main .box.normal{
     width: calc(100% / 9);
     height: calc(100% / 9);
 }
-main .box.easy{
+main .box.hard{
     width: calc(100% / 7);
     height: calc(100% / 7);
 }
